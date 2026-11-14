@@ -1,0 +1,598 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263b43;
+    background: #f7f9fa;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    padding: 15px 7%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #176b68;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #34474c;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #176b68;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: #176b68;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section {
+    padding: 75px 8%;
+}
+
+.tinted {
+    background: #eaf4f3;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.eyebrow {
+    color: #21837d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.about h2 {
+    color: #173b49;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #64777d;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    background: #176b68;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: #10514f;
+}
+
+.secondary-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 1px solid #176b68;
+    border-radius: 6px;
+    background: white;
+    color: #176b68;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #e0f2f1;
+}
+
+/* =========================
+   HOME / HERO
+========================= */
+
+.hero {
+    min-height: 480px;
+    padding: 75px 10%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #dff1ef, #edf1fb);
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    color: #173b49;
+    font-size: clamp(36px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.hero-content p {
+    margin: 20px 0 28px;
+    max-width: 600px;
+    color: #52666d;
+    font-size: 16px;
+}
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card,
+.support-card {
+    padding: 27px 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.service-card:hover,
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+.card-icon {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 36px;
+}
+
+.service-card h3,
+.support-card h3 {
+    color: #176b68;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.service-card p,
+.support-card p {
+    color: #687a80;
+    font-size: 14px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #176b68;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* =========================
+   CAMPUS NAVIGATION
+========================= */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.search-box input,
+.food-tools select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #bfd3d1;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+}
+
+.search-box input:focus,
+.food-tools select:focus {
+    border-color: #176b68;
+}
+
+.results {
+    max-width: 650px;
+    min-height: 65px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 9px;
+    background: white;
+    text-align: left;
+    color: #61747a;
+}
+
+.location-card {
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #eaf4f3;
+    border-radius: 8px;
+    border-left: 4px solid #176b68;
+}
+
+.location-card h3 {
+    color: #176b68;
+    margin-bottom: 5px;
+}
+
+.location-card p {
+    font-size: 14px;
+}
+
+/* =========================
+   FOOD AND DINING
+========================= */
+
+.food-tools {
+    max-width: 850px;
+    margin: auto;
+}
+
+.food-tools h3 {
+    margin-bottom: 15px;
+    color: #176b68;
+}
+
+.food-tools select {
+    max-width: 350px;
+    margin-bottom: 25px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.food-card,
+.phrase-card {
+    padding: 22px;
+    border-radius: 9px;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.food-card h3,
+.phrase-card h3 {
+    margin-bottom: 9px;
+    color: #176b68;
+}
+
+.food-card p,
+.phrase-card p {
+    color: #62747a;
+    font-size: 14px;
+}
+
+.communication-box {
+    max-width: 850px;
+    margin: 45px auto 0;
+}
+
+.communication-box > h3 {
+    color: #176b68;
+    margin-bottom: 8px;
+}
+
+.communication-box > p {
+    color: #64777d;
+    margin-bottom: 15px;
+}
+
+.communication-box .phrase-card {
+    margin-top: 12px;
+}
+
+/* =========================
+   COPY BUTTONS
+========================= */
+
+.copy-btn {
+    padding: 8px 14px;
+    margin-top: 13px;
+    border: none;
+    border-radius: 5px;
+    background: #e0f2f1;
+    color: #176b68;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #176b68;
+    color: white;
+}
+
+.small-message {
+    min-height: 24px;
+    margin-top: 10px;
+    color: #176b68;
+    font-size: 13px;
+}
+
+/* =========================
+   LANGUAGE SUPPORT
+========================= */
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* =========================
+   ONBOARDING CHECKLIST
+========================= */
+
+.checklist-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.progress-heading h3 {
+    color: #176b68;
+}
+
+.progress-heading span {
+    color: #176b68;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.progress-track {
+    height: 12px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background: #e4eeee;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: #21837d;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 5px;
+    border-bottom: 1px solid #edf0f0;
+    cursor: pointer;
+    color: #52666d;
+}
+
+.check-item input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    accent-color: #176b68;
+}
+
+.check-item input:checked + span {
+    text-decoration: line-through;
+    color: #879597;
+}
+
+/* =========================
+   COMMUNITY SUPPORT
+========================= */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.help-note {
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding: 18px;
+    border-left: 4px solid #21837d;
+    border-radius: 6px;
+    background: white;
+    color: #52666d;
+    font-size: 14px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    text-align: center;
+    background: white;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 15px auto 0;
+    color: #64777d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 15px;
+    background: #173b49;
+    color: white;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 15px;
+    color: #c5d6d8;
+    font-size: 12px;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 1000px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 55px 7%;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .service-grid,
+    .food-grid,
+    .language-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .checklist-box {
+        padding: 20px;
+    }
+}
