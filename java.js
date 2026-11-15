@@ -343,6 +343,22 @@ resetChecklist.addEventListener("click", function() {
 
 loadChecklist();
 
+function showSupportInfo(type) {
+
+  const messages = {
+    community: "Explore university clubs, student groups and campus events to connect with other students.",
+
+    buddy: "Ask experienced students for guidance about campus facilities, classes and everyday university life.",
+
+    support: "For academic assistance, contact your faculty or relevant university office. For personal support, seek help from the appropriate university counselling service.",
+
+    assistant: "Explore your university library, academic offices, student services and other campus facilities."
+  };
+
+  alert(messages[type]);
+}
+
+
 
 /* =========================
    END OF JAVASCRIPT
