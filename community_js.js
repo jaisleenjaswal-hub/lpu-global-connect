@@ -4,14 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const connectForm = document.getElementById("connectForm");
     const studentPosts = document.getElementById("studentPosts");
     const formMessage = document.getElementById("formMessage");
-    const connectSection = connectForm.closest("section");
     const authPanelMount = document.getElementById("authPanelMount");
     const connectFormArea = document.getElementById("connectFormArea");
 
-    // 2. GET SUPABASE CLIENT
+    // 2. MOVE LOGIN PANEL BELOW NAVBAR
+    const communityHero = document.querySelector(".community-hero");
+
+    if (authPanelMount && communityHero) {
+        communityHero.parentNode.insertBefore(
+            authPanelMount,
+            communityHero
+        );
+    }
+
+    // 3. GET SUPABASE CLIENT
     const db = supabaseClient;
 
-    // 3. CREATE LOGIN PANEL
+    // 4. CREATE LOGIN PANEL
     const authPanel = document.createElement("section");
     authPanel.className = "community-auth-panel";
 
@@ -47,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentUser = null;
 
-    // 4. SIGN UP
+    // 5. SIGN UP
     signupBtn.addEventListener("click", async function () {
 
         const email = authEmail.value.trim();
@@ -79,47 +88,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 5. SIGN IN
-loginBtn.addEventListener("click", async function () {
+    // 6. SIGN IN
+    loginBtn.addEventListener("click", async function () {
 
-    const email = authEmail.value.trim();
-    const password = authPassword.value;
+        const email = authEmail.value.trim();
+        const password = authPassword.value;
 
-    if (!email || !password) {
-        authMessage.textContent =
-            "Please enter your email and password.";
-        return;
-    }
-
-    authMessage.textContent = "Signing in...";
-    loginBtn.disabled = true;
-
-    try {
-        const { data, error } = await db.auth.signInWithPassword({
-            email: email,
-            password: password
-        });
-
-        if (error) {
-            authMessage.textContent = error.message;
+        if (!email || !password) {
+            authMessage.textContent =
+                "Please enter your email and password.";
             return;
         }
 
-        updateAuthDisplay(data.user);
-        authMessage.textContent = "Signed in successfully!";
-        await displayIntroductions();
+        authMessage.textContent = "Signing in...";
+        loginBtn.disabled = true;
 
-    } catch (err) {
-        authMessage.textContent =
-            "Connection error. Please refresh and try again.";
-        console.error("Sign in error:", err);
+        try {
+            const { data, error } = await db.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
 
-    } finally {
-        loginBtn.disabled = false;
-    }
-});
+            if (error) {
+                authMessage.textContent = error.message;
+                return;
+            }
 
-    // 6. SIGN OUT
+            updateAuthDisplay(data.user);
+            authMessage.textContent = "Signed in successfully!";
+            await displayIntroductions();
+
+        } catch (err) {
+            authMessage.textContent =
+                "Connection error. Please refresh and try again.";
+            console.error("Sign in error:", err);
+
+        } finally {
+            loginBtn.disabled = false;
+        }
+    });
+
+    // 7. SIGN OUT
     logoutBtn.addEventListener("click", async function () {
 
         const { error } = await db.auth.signOut();
@@ -129,42 +138,41 @@ loginBtn.addEventListener("click", async function () {
         }
     });
 
-    // 7. UPDATE LOGIN DISPLAY
+    // 8. UPDATE LOGIN DISPLAY
     function updateAuthDisplay(user) {
 
-    currentUser = user;
+        currentUser = user;
 
-    if (user) {
+        if (user) {
 
-        authStatus.textContent = "Signed in as " + user.email;
+            authStatus.textContent = "Signed in as " + user.email;
 
-        signupBtn.hidden = true;
-        loginBtn.hidden = true;
-        logoutBtn.hidden = false;
+            signupBtn.hidden = true;
+            loginBtn.hidden = true;
+            logoutBtn.hidden = false;
 
-        authEmail.hidden = true;
-        authPassword.hidden = true;
+            authEmail.hidden = true;
+            authPassword.hidden = true;
 
-        connectFormArea.hidden = false;
+            connectFormArea.hidden = false;
 
-    } else {
+        } else {
 
-        authStatus.textContent =
-            "Please sign in to share your introduction.";
+            authStatus.textContent =
+                "Please sign in to share your introduction.";
 
-        signupBtn.hidden = false;
-        loginBtn.hidden = false;
-        logoutBtn.hidden = true;
+            signupBtn.hidden = false;
+            loginBtn.hidden = false;
+            logoutBtn.hidden = true;
 
-        authEmail.hidden = false;
-        authPassword.hidden = false;
+            authEmail.hidden = false;
+            authPassword.hidden = false;
 
-        connectFormArea.hidden = true;
+            connectFormArea.hidden = true;
+        }
     }
-}
 
-
-    // 8. DISPLAY INTRODUCTIONS FROM SUPABASE
+    // 9. DISPLAY INTRODUCTIONS FROM SUPABASE
     async function displayIntroductions() {
 
         studentPosts.innerHTML = "<p>Loading introductions...</p>";
@@ -212,7 +220,7 @@ loginBtn.addEventListener("click", async function () {
             card.appendChild(message);
             card.appendChild(category);
 
-            // Only the owner can see their delete button
+            // ONLY THE OWNER CAN DELETE THEIR POST
             if (currentUser && currentUser.id === post.user_id) {
 
                 const deleteButton = document.createElement("button");
@@ -250,7 +258,7 @@ loginBtn.addEventListener("click", async function () {
         });
     }
 
-    // 9. SUBMIT INTRODUCTION
+    // 10. SUBMIT INTRODUCTION
     connectForm.addEventListener("submit", async function (event) {
 
         event.preventDefault();
@@ -310,7 +318,7 @@ loginBtn.addEventListener("click", async function () {
         displayIntroductions();
     });
 
-    // 10. LISTEN FOR LOGIN CHANGES
+    // 11. LISTEN FOR LOGIN CHANGES
     db.auth.onAuthStateChange(function (event, session) {
 
         updateAuthDisplay(session ? session.user : null);
@@ -318,7 +326,7 @@ loginBtn.addEventListener("click", async function () {
         displayIntroductions();
     });
 
-    // 11. INITIAL LOAD
+    // 12. INITIAL LOAD
     async function initializeCommunity() {
 
         const { data, error } = await db.auth.getSession();
@@ -333,7 +341,6 @@ loginBtn.addEventListener("click", async function () {
         );
 
         displayIntroductions();
-
     }
 
     initializeCommunity();
@@ -342,39 +349,42 @@ loginBtn.addEventListener("click", async function () {
 
 });
 
-// SUPPORT DIRECTORY SEARCH
-const supportSearch = document.getElementById("supportSearch");
-const supportMessage = document.getElementById("supportSearchMessage");
 
-const supportCards = document.querySelectorAll(".support-card");
+// 13. SUPPORT DIRECTORY SEARCH
+document.addEventListener("DOMContentLoaded", function () {
 
-if (supportSearch) {
-    supportSearch.addEventListener("input", function () {
+    const supportSearch = document.getElementById("supportSearch");
+    const supportMessage = document.getElementById("supportSearchMessage");
+    const supportCards = document.querySelectorAll(".support-card");
 
-        const searchText = supportSearch.value
-            .trim()
-            .toLowerCase();
+    if (supportSearch) {
 
-        let visibleCount = 0;
+        supportSearch.addEventListener("input", function () {
 
-        supportCards.forEach(function (card) {
+            const searchText = supportSearch.value
+                .trim()
+                .toLowerCase();
 
-            const cardText = card.textContent.toLowerCase();
+            let visibleCount = 0;
 
-            const matches = cardText.includes(searchText);
+            supportCards.forEach(function (card) {
 
-            card.style.display = matches ? "" : "none";
+                const cardText = card.textContent.toLowerCase();
+                const matches = cardText.includes(searchText);
 
-            if (matches) visibleCount++;
+                card.style.display = matches ? "" : "none";
+
+                if (matches) visibleCount++;
+            });
+
+            if (visibleCount === 0) {
+                supportMessage.textContent =
+                    "No matching help options found. Try another search.";
+            } else {
+                supportMessage.textContent =
+                    searchText === "" ? "" :
+                    visibleCount + " matching option(s) found.";
+            }
         });
-
-        if (visibleCount === 0) {
-            supportMessage.textContent =
-                "No matching help options found. Try another search.";
-        } else {
-            supportMessage.textContent =
-                searchText === "" ? "" :
-                visibleCount + " matching option(s) found.";
-        }
-    });
-}
+    }
+});

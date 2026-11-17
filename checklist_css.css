@@ -1,0 +1,267 @@
+/* CHECKLIST HERO */
+.checklist-hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: #e8f3f2;
+    color: #173f40;
+}
+
+.checklist-hero h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.checklist-hero p {
+    font-size: 16px;
+}
+
+/* MAIN CONTAINER */
+.checklist-container {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 0 24px;
+}
+
+/* PROGRESS */
+.progress-section {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    margin-bottom: 40px;
+}
+
+.progress-section h2 {
+    color: #244b4b;
+    margin-bottom: 12px;
+}
+
+#progressText {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.progress-track {
+    height: 13px;
+    background: #e5eeee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #25847d;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* SECTION HEADING */
+.checklist-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.checklist-heading h2 {
+    color: #244b4b;
+}
+
+#resetChecklist {
+    border: none;
+    background: #f8eae8;
+    color: #99443d;
+    padding: 11px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* PERSONAL TASK CREATOR */
+.personal-task-section {
+    background: #f0f7f6;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.personal-task-section h3 {
+    color: #244b4b;
+    margin-bottom: 8px;
+}
+
+.personal-task-section p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.personal-task-form {
+    display: flex;
+    gap: 12px;
+}
+
+.personal-task-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbdcda;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.personal-task-form input:focus {
+    border-color: #25847d;
+}
+
+#addPersonalTask {
+    border: none;
+    background: #25847d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* FILTER BUTTONS */
+.checklist-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.check-filter {
+    border: 1px solid #25847d;
+    background: white;
+    color: #25847d;
+    padding: 11px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.check-filter:hover {
+    background: #e8f3f2;
+}
+
+.check-filter.active {
+    background: #25847d;
+    color: white;
+}
+
+/* TASK CARDS */
+.checklist-tasks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: white;
+    padding: 23px;
+    border-radius: 13px;
+    border: 1px solid #e5eeee;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    transition: 0.2s;
+}
+
+.task-card:hover {
+    border-color: #25847d;
+    transform: translateY(-2px);
+}
+
+.task-card input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    accent-color: #25847d;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #244b4b;
+}
+
+.task-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.task-card.completed {
+    background: #f2f8f6;
+}
+
+.task-card.completed h3 {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* DELETE PERSONAL TASK */
+.delete-task {
+    border: none;
+    background: #f8eae8;
+    color: #99443d;
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.no-tasks {
+    color: #777;
+    padding: 25px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.checklist-note {
+    text-align: center;
+    margin: 35px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 700px) {
+    .checklist-hero h1 {
+        font-size: 29px;
+    }
+
+    .checklist-tasks {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .personal-task-form {
+        flex-direction: column;
+    }
+
+    #addPersonalTask {
+        width: 100%;
+    }
+
+    .checklist-filters {
+        gap: 10px;
+    }
+}

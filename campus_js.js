@@ -115,9 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
         locationResults.innerHTML = "";
 
         if (locations.length === 0) {
+
             locationResults.textContent =
-                "No matching places in our quick directory. " +
-                "Your Google Maps search is displayed below.";
+                "Explore your selected campus area on the map below. " +
+                "You can search for a place or open Google Maps for more details.";
+
             return;
         }
 
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
             displayLocations(getFilteredLocations());
 
             locationDetails.innerHTML =
-                "<p>Enter a campus location to search on the map.</p>";
+                "<p>Enter a campus location to explore it on the map.</p>";
 
             return;
         }
@@ -187,32 +189,22 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display matching directory cards
         displayLocations(filteredLocations);
 
-        // Always reflect the typed search on Google Maps
+        // Reflect the user's search on Google Maps
         campusMap.src = getMapUrl(searchText);
 
         locationDetails.innerHTML = "";
 
         const heading = document.createElement("h3");
-        heading.textContent = "Your Search: " + searchText;
+        heading.textContent = "Your Selected Location: " + searchText;
 
         const message = document.createElement("p");
 
-        if (filteredLocations.length > 0) {
-            message.textContent =
-                "Matching campus directory options are shown above. " +
-                "The map below also reflects your search.";
-        } else {
-            message.textContent =
-                "This place isn't in our quick campus directory. " +
-                "Your Google Maps search is being shown below. " +
-                "You can open Google Maps for more results.";
-        }
 
         const mapLink = document.createElement("a");
         mapLink.href = getSearchUrl(searchText);
         mapLink.target = "_blank";
         mapLink.rel = "noopener noreferrer";
-        mapLink.textContent = "Open Search in Google Maps";
+        mapLink.textContent = "Explore on Google Maps";
         mapLink.className = "directions-btn";
 
         locationDetails.appendChild(heading);
