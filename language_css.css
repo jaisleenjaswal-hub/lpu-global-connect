@@ -1,0 +1,260 @@
+/* =========================
+   LANGUAGE HELP PAGE
+========================= */
+
+.language-page {
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* HERO SECTION */
+
+.language-hero {
+    text-align: center;
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #e5f3f1, #f2f5ff);
+}
+
+.language-hero .eyebrow {
+    color: #176b68;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.language-hero h1 {
+    font-size: 42px;
+    color: #183b50;
+    margin: 15px 0;
+}
+
+.language-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #596b78;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* SEARCH SECTION */
+
+.phrase-search-section {
+    max-width: 1000px;
+    margin: 50px auto 35px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.phrase-search-section h2,
+.phrase-results-section h2 {
+    color: #183b50;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.phrase-search-box {
+    display: flex;
+    max-width: 650px;
+    margin: 25px auto;
+    gap: 10px;
+}
+
+.phrase-search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #d5e0e5;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.phrase-search-box input:focus {
+    border-color: #176b68;
+}
+
+.phrase-search-box button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 9px;
+    background: #176b68;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.phrase-search-box button:hover {
+    background: #105451;
+}
+
+/* FILTER BUTTONS */
+
+.phrase-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.phrase-filter {
+    padding: 10px 18px;
+    border: 1px solid #d5e0e5;
+    border-radius: 25px;
+    background: white;
+    color: #425563;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.phrase-filter:hover,
+.phrase-filter.active {
+    background: #176b68;
+    color: white;
+    border-color: #176b68;
+}
+
+/* PHRASE RESULTS */
+
+.phrase-results-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.phrase-results-section > p {
+    color: #687985;
+    margin-bottom: 25px;
+}
+
+.phrase-results {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* PHRASE CARD */
+
+.phrase-card {
+    background: white;
+    border: 1px solid #e0e8eb;
+    border-radius: 13px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.phrase-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.phrase-category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e9f4f2;
+    color: #176b68;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.phrase-card h3 {
+    color: #183b50;
+    font-size: 20px;
+    margin: 17px 0 12px;
+}
+
+.phrase-translation {
+    color: #176b68;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.phrase-pronunciation {
+    color: #73818b;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.copy-phrase-btn {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 7px;
+    background: #edf3f5;
+    color: #183b50;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copy-phrase-btn:hover {
+    background: #dce9ed;
+}
+
+/* NO RESULTS */
+
+.no-phrases {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px 20px;
+    background: #f6f9fa;
+    border-radius: 12px;
+    color: #687985;
+}
+
+/* LANGUAGE TIP */
+
+.language-tip {
+    max-width: 1000px;
+    margin: 55px auto 20px;
+    padding: 35px 25px;
+    text-align: center;
+    background: #edf5f8;
+    border-radius: 13px;
+}
+
+.language-tip h2 {
+    color: #183b50;
+    margin-bottom: 12px;
+}
+
+.language-tip p {
+    color: #596b78;
+    line-height: 1.7;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    .language-hero {
+        padding: 65px 20px;
+    }
+
+    .language-hero h1 {
+        font-size: 32px;
+    }
+
+    .phrase-search-box {
+        flex-direction: column;
+    }
+
+    .phrase-search-box button {
+        width: 100%;
+    }
+
+    .phrase-results {
+        grid-template-columns: 1fr;
+    }
+
+    .phrase-search-section h2,
+    .phrase-results-section h2 {
+        font-size: 23px;
+    }
+
+    .language-tip {
+        margin: 35px 18px;
+    }
+}

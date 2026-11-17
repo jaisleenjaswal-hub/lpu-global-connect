@@ -3,365 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPU Global Connect</title>
+    <meta name="description" content="LPU Global Connect helps international students navigate campus life, food, language and student support.">
+    <title>LPU Global Connect | Far From Home</title>
     <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">LPU Global Connect</a>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🌍</span>
+            LPU Global Connect
+        </a>
 
-            <button class="menu-toggle" id="menuToggle">☰</button>
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#campus">Campus</a></li>
-                <li><a href="#food">Food</a></li>
-                <li><a href="#language">Language</a></li>
-                <li><a href="#onboarding">Checklist</a></li>
-                <li><a href="#community">Support</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="campus.html">Campus</a></li>
+            <li><a href="food.html">Food & Dining</a></li>
+            <li><a href="language.html">Language</a></li>
+            <li><a href="checklist.html">Checklist</a></li>
+            <li><a href="community.html">Community</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
+<main>
 
-        <!-- HOME -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <span class="eyebrow">YOUR INTERNATIONAL STUDENT GUIDE</span>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">YOUR INTERNATIONAL STUDENT COMPANION</span>
 
-                <h1>Your Campus,<br>Your Community,<br>Your Home.</h1>
+            <h1>A New Place.<br>A New Journey.<br><span>A Place to Belong.</span></h1>
 
-                <p>
-                    Starting a new journey in a new country can feel challenging.
-                    Find helpful campus information, food guidance and student
-                    support — all in one place.
-                </p>
-
-                <a href="#services" class="primary-btn">Explore Services</a>
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section id="services" class="section">
-            <div class="section-heading">
-                <span class="eyebrow">EXPLORE</span>
-                <h2>How Can We Help You?</h2>
-                <p>Choose a service to make your campus journey easier.</p>
-            </div>
-
-            <div class="service-grid">
-
-                <a href="#food" class="service-card">
-                    <span class="card-icon">🍽️</span>
-                    <h3>Food & Dining</h3>
-                    <p>Explore food information and dietary guidance.</p>
-                    <span class="card-link">Explore →</span>
-                </a>
-
-                <a href="#language" class="service-card">
-                    <span class="card-icon">💬</span>
-                    <h3>Language Support</h3>
-                    <p>Find useful phrases for everyday communication.</p>
-                    <span class="card-link">Explore →</span>
-                </a>
-
-                <a href="#campus" class="service-card">
-                    <span class="card-icon">📍</span>
-                    <h3>Campus Navigation</h3>
-                    <p>Search for important campus locations.</p>
-                    <span class="card-link">Explore →</span>
-                </a>
-
-                <a href="#community" class="service-card">
-                    <span class="card-icon">🤝</span>
-                    <h3>Community & Support</h3>
-                    <p>Find guidance and ways to connect with others.</p>
-                    <span class="card-link">Explore →</span>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- CAMPUS NAVIGATION -->
-        <section id="campus" class="section tinted">
-            <div class="section-heading">
-                <span class="eyebrow">FIND YOUR WAY</span>
-                <h2>Campus Navigation</h2>
-                <p>Search for a campus block or facility.</p>
-            </div>
-
-            <div class="search-box">
-                <input
-                    type="text"
-                    id="locationSearch"
-                    placeholder="Try Library or Hospital..."
-                >
-                <button id="searchBtn" class="primary-btn">Search</button>
-            </div>
-
-            <div id="searchResults" class="results">
-                <p>Search for a location to see its information.</p>
-            </div>
-        </section>
-
-        <!-- FOOD AND DINING -->
-        <section id="food" class="section">
-            <div class="section-heading">
-                <span class="eyebrow">EAT WITH CONFIDENCE</span>
-                <h2>Food & Dining</h2>
-                <p>
-                    Understand food choices and communicate your dietary needs.
-                    Always confirm ingredients with the food provider.
-                </p>
-            </div>
-
-            <div class="food-tools">
-                <h3>What information are you looking for?</h3>
-
-                <select id="foodFilter">
-                    <option value="all">All information</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="allergy">Allergy awareness</option>
-                    <option value="halal">Halal information</option>
-                </select>
-
-                <div id="foodResults" class="food-grid"></div>
-            </div>
-
-            <div class="communication-box">
-                <h3>Useful Food Communication Cards</h3>
-                <p>Show these messages to a food counter staff member.</p>
-
-                <div class="phrase-card">
-                    <p>"Could you please tell me the ingredients?"</p>
-                    <button class="copy-btn" data-copy="Could you please tell me the ingredients?">
-                        Copy message
-                    </button>
-                </div>
-
-                <div class="phrase-card">
-                    <p>"Does this contain any nuts?"</p>
-                    <button class="copy-btn" data-copy="Does this contain any nuts?">
-                        Copy message
-                    </button>
-                </div>
-
-                <div class="phrase-card">
-                    <p>"I have specific dietary requirements. Could you help me?"</p>
-                    <button class="copy-btn" data-copy="I have specific dietary requirements. Could you help me?">
-                        Copy message
-                    </button>
-                </div>
-
-                <p id="copyMessage" class="small-message" aria-live="polite"></p>
-            </div>
-        </section>
-
-        <!-- LANGUAGE SUPPORT -->
-        <section id="language" class="section tinted">
-            <div class="section-heading">
-                <span class="eyebrow">COMMUNICATE WITH CONFIDENCE</span>
-                <h2>Language & Communication</h2>
-                <p>Useful sentences for everyday campus situations.</p>
-            </div>
-
-            <div class="language-grid">
-
-                <div class="phrase-card">
-                    <h3>Asking for Directions</h3>
-                    <p>Could you please guide me to this location?</p>
-                    <button class="copy-btn" data-copy="Could you please guide me to this location?">
-                        Copy phrase
-                    </button>
-                </div>
-
-                <div class="phrase-card">
-                    <h3>In the Classroom</h3>
-                    <p>Could you please explain that again?</p>
-                    <button class="copy-btn" data-copy="Could you please explain that again?">
-                        Copy phrase
-                    </button>
-                </div>
-
-                <div class="phrase-card">
-                    <h3>At the Help Desk</h3>
-                    <p>I need some assistance with this process.</p>
-                    <button class="copy-btn" data-copy="I need some assistance with this process.">
-                        Copy phrase
-                    </button>
-                </div>
-
-                <div class="phrase-card">
-                    <h3>Meeting Someone</h3>
-                    <p>Hello! I am new here. Can we connect?</p>
-                    <button class="copy-btn" data-copy="Hello! I am new here. Can we connect?">
-                        Copy phrase
-                    </button>
-                </div>
-
-            </div>
-
-            <p id="languageCopyMessage" class="small-message" aria-live="polite"></p>
-        </section>
-
-        <!-- ONBOARDING CHECKLIST -->
-        <section id="onboarding" class="section">
-            <div class="section-heading">
-                <span class="eyebrow">GETTING STARTED</span>
-                <h2>Onboarding Checklist</h2>
-                <p>Keep track of important tasks during your first days.</p>
-            </div>
-
-            <div class="checklist-box">
-                <div class="progress-heading">
-                    <h3>Your Progress</h3>
-                    <span id="progressText">0% completed</span>
-                </div>
-
-                <div class="progress-track">
-                    <div id="progressBar" class="progress-fill"></div>
-                </div>
-
-                <div id="checklistItems">
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Complete university registration formalities</span>
-                    </label>
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Understand campus facilities and locations</span>
-                    </label>
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Check class timetable and academic information</span>
-                    </label>
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Learn about food and dining facilities</span>
-                    </label>
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Save important university support information</span>
-                    </label>
-
-                    <label class="check-item">
-                        <input type="checkbox" class="task">
-                        <span>Connect with classmates or a student buddy</span>
-                    </label>
-
-                </div>
-
-                <button id="resetChecklist" class="secondary-btn">
-                    Reset Checklist
-                </button>
-            </div>
-        </section>
-
-        <!-- COMMUNITY AND SUPPORT -->
-        <section id="community" class="section tinted">
-            <div class="section-heading">
-                <span class="eyebrow">YOU ARE NOT ALONE</span>
-                <h2>Community & Support</h2>
-                <p>Finding help and building connections can make campus life easier.</p>
-            </div>
-
-            <div class="support-grid">
-
-    <div class="support-card">
-    <h3>Meet Other Students</h3>
-    <p>Connect with students and explore campus activities.</p>
-    <ul>
-      <li>Explore student clubs</li>
-      <li>Discover campus events</li>
-      <li>Find student communities</li>
-    </ul>
-    <button onclick="showSupportInfo('community')">
-      Explore Community
-    </button>
-  </div>
-
-  <div class="support-card">
-    <h3>Peer Buddy</h3>
-    <p>Get guidance from experienced students.</p>
-    <ul>
-      <li>Campus guidance</li>
-      <li>Study tips and resources</li>
-      <li>Everyday student advice</li>
-    </ul>
-    <button onclick="showSupportInfo('buddy')">
-      Get Guidance
-    </button>
-  </div>
-
-  <div class="support-card">
-    <h3>Support</h3>
-    <p>Find useful university support resources.</p>
-    <ul>
-      <li>Academic assistance</li>
-      <li>Student counselling</li>
-      <li>Emergency information</li>
-    </ul>
-    <button onclick="showSupportInfo('support')">
-      View Support
-    </button>
-  </div>
-
-  <div class="support-card">
-    <h3>University Assistant</h3>
-    <p>Explore important university information.</p>
-    <ul>
-      <li>Campus facilities</li>
-      <li>Important offices</li>
-      <li>Frequently asked questions</li>
-    </ul>
-    <button onclick="showSupportInfo('assistant')">
-      Explore University
-    </button>
-  </div>
-
-</div>
-
-
-            <div class="help-note">
-                <strong>Important:</strong>
-                For urgent assistance, use the university's verified official
-                contact information or contact the appropriate campus authority.
-                This prototype does not replace official emergency services.
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="section about">
-            <span class="eyebrow">OUR PURPOSE</span>
-            <h2>About LPU Global Connect</h2>
             <p>
-                LPU Global Connect is a student support portal concept designed
-                to help international students access everyday campus information,
-                communicate their needs and feel more connected to university life.
+                Moving to a new country is a big step.
+                From finding your way around campus to understanding
+                local food and meeting new people, we're here to help
+                you feel more at home at LPU.
             </p>
-        </section>
 
-    </main>
+            <div class="hero-buttons">
+                <a href="campus.html" class="primary-btn">Explore Campus →</a>
+                <a href="checklist.html" class="outline-btn">Get Started</a>
+            </div>
+        </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <h3>LPU Global Connect</h3>
-        <p>Making campus life easier, one connection at a time.</p>
-        <p class="copyright">© 2026 LPU Global Connect | Student Prototype</p>
-    </footer>
+        <div class="hero-side">
+            <div class="welcome-card">
+                <span class="welcome-icon">✈️</span>
+                <h3>Your journey starts here!</h3>
+                <p>Everything you need to make your university experience easier.</p>
 
-    <script src="java.js"></script>
+                <div class="welcome-stats">
+                    <div>
+                        <strong>01</strong>
+                        <span>Explore</span>
+                    </div>
+                    <div>
+                        <strong>02</strong>
+                        <span>Connect</span>
+                    </div>
+                    <div>
+                        <strong>03</strong>
+                        <span>Belong</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- QUICK ACCESS -->
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">YOUR STUDENT COMPANION</span>
+            <h2>What Do You Need Today?</h2>
+            <p>Choose a service and find the information you need.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <a href="campus.html" class="service-card">
+                <span class="card-icon">📍</span>
+                <h3>Campus Navigation</h3>
+                <p>Find university facilities, explore the campus map and get directions.</p>
+                <span class="card-link">Find a Place →</span>
+            </a>
+
+            <a href="food.html" class="service-card">
+                <span class="card-icon">🍽️</span>
+                <h3>Food & Dining</h3>
+                <p>Explore dining information, food preferences and dietary guidance.</p>
+                <span class="card-link">Explore Food →</span>
+            </a>
+
+            <a href="language.html" class="service-card">
+                <span class="card-icon">💬</span>
+                <h3>Language Support</h3>
+                <p>Learn useful Hindi and Punjabi phrases for everyday communication.</p>
+                <span class="card-link">Learn Phrases →</span>
+            </a>
+
+            <a href="community.html" class="service-card">
+                <span class="card-icon">🤝</span>
+                <h3>Community & Support</h3>
+                <p>Discover student connections, university assistance and helpful FAQs.</p>
+                <span class="card-link">Find Support →</span>
+            </a>
+
+            <a href="checklist.html" class="service-card">
+                <span class="card-icon">📋</span>
+                <h3>Getting Started</h3>
+                <p>Track your important onboarding tasks and monitor your progress.</p>
+                <span class="card-link">View Checklist →</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FIRST DAY GUIDE -->
+    <section class="section tinted">
+        <div class="section-heading">
+            <span class="eyebrow">YOUR FIRST STEPS</span>
+            <h2>Starting at LPU?</h2>
+            <p>A few useful steps can make your transition easier.</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <span class="step-number">01</span>
+                <h3>Know Your Campus</h3>
+                <p>Find your academic buildings, library and other essential facilities.</p>
+                <a href="campus.html">Explore locations →</a>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">02</span>
+                <h3>Understand Daily Life</h3>
+                <p>Learn about food choices, dietary requirements and local communication.</p>
+                <a href="food.html">Explore dining →</a>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">03</span>
+                <h3>Build Connections</h3>
+                <p>Discover ways to meet other students and access university support.</p>
+                <a href="community.html">Find support →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURED HELP -->
+    <section class="help-banner">
+        <div>
+            <span class="eyebrow">NEED A LITTLE GUIDANCE?</span>
+            <h2>Your university journey, one step at a time.</h2>
+            <p>Use your personal onboarding checklist to keep track of important tasks.</p>
+        </div>
+
+        <a href="checklist.html" class="primary-btn">Open My Checklist →</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about">
+        <span class="eyebrow">ABOUT THE PROJECT</span>
+        <h2>Far From Home, But Never Alone.</h2>
+        <p>
+            LPU Global Connect is a student-support website prototype
+            developed as part of the Far From Home design-thinking project.
+            Its purpose is to make campus information more accessible,
+            simplify everyday communication and help international students
+            feel welcomed and connected.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <h3>🌍 LPU Global Connect</h3>
+    <p>Making campus life easier, one connection at a time.</p>
+    <div class="footer-links">
+        <a href="campus.html">Campus</a>
+        <a href="food.html">Food</a>
+        <a href="language.html">Language</a>
+        <a href="community.html">Support</a>
+    </div>
+    <p class="copyright">© 2026 LPU Global Connect | Far From Home Project</p>
+</footer>
+
+<script src="java.js"></script>
 </body>
 </html>

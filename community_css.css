@@ -1,0 +1,500 @@
+/* =========================
+   COMMUNITY HERO
+========================= */
+
+.community-hero {
+    min-height: 390px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #123f50, #287c78);
+    color: white;
+}
+
+.community-hero-content {
+    max-width: 720px;
+}
+
+.hero-label,
+.section-heading span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.community-hero h1 {
+    font-size: 42px;
+    margin: 18px 0;
+    line-height: 1.2;
+}
+
+.community-hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.community-btn {
+    display: inline-block;
+    padding: 13px 23px;
+    background: #e9bd75;
+    color: #173d45;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.community-btn:hover {
+    background: #f4d39c;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.community-section,
+.support-section,
+.connect-section {
+    padding: 70px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.section-heading span {
+    color: #287c78;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #173d45;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #68777b;
+    line-height: 1.7;
+}
+
+/* =========================
+   COMMUNITY CARDS
+========================= */
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.community-card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 12px;
+    border: 1px solid #e4ebea;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.09);
+}
+
+.community-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.community-card h3 {
+    color: #173d45;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.community-card p {
+    color: #68777b;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.community-card a,
+.support-card a {
+    color: #176b68;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.community-card a:hover,
+.support-card a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   SUPPORT SECTION
+========================= */
+
+.support-section {
+    background: #f2f7f6;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.support-card {
+    background: white;
+    padding: 27px;
+    border-radius: 12px;
+    border-left: 4px solid #287c78;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.support-card h3 {
+    color: #173d45;
+    margin-bottom: 13px;
+}
+
+.support-card p {
+    color: #68777b;
+    line-height: 1.7;
+    margin-bottom: 17px;
+}
+
+/* =========================
+   CONNECT FORM
+========================= */
+
+.connect-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f5f8f7;
+    border-radius: 12px;
+    border: 1px solid #e3ebea;
+}
+
+.connect-form label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #173d45;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.connect-form input,
+.connect-form select,
+.connect-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d4dfdd;
+    border-radius: 7px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.connect-form input:focus,
+.connect-form select:focus,
+.connect-form textarea:focus {
+    border-color: #287c78;
+    box-shadow: 0 0 0 3px rgba(40, 124, 120, 0.1);
+}
+
+.connect-form textarea {
+    resize: vertical;
+}
+
+.connect-form button {
+    margin-top: 22px;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================
+   STUDENT POSTS
+========================= */
+
+.student-posts {
+    max-width: 850px;
+    margin: 50px auto 0;
+}
+
+.student-posts h3 {
+    color: #173d45;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.student-post {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #e3ebea;
+    margin-bottom: 15px;
+}
+
+.student-post h4 {
+    color: #176b68;
+    margin-bottom: 7px;
+}
+
+.student-post p {
+    color: #59696d;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.post-category {
+    display: inline-block;
+    background: #e6f2ef;
+    color: #176b68;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.empty-posts {
+    color: #68777b;
+    padding: 20px;
+    background: #f5f8f7;
+    border-radius: 8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.community-footer {
+    text-align: center;
+    background: #123f50;
+    color: white;
+    padding: 38px 20px;
+}
+
+.community-footer h3 {
+    margin-bottom: 12px;
+}
+
+.community-footer p {
+    margin: 8px 0;
+    color: #d8e7e5;
+    font-size: 14px;
+}
+
+.community-footer a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #f1c982;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+    .community-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .community-hero {
+        padding: 65px 7%;
+        min-height: 350px;
+    }
+
+    .community-hero h1 {
+        font-size: 31px;
+    }
+
+    .community-section,
+    .support-section,
+    .connect-section {
+        padding: 50px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .community-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .connect-form {
+        padding: 20px;
+    }
+}
+
+/* COMMUNITY ACCOUNT PANEL */
+
+.community-auth-panel {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.community-auth-panel h3 {
+    margin-bottom: 10px;
+    color: #243b63;
+}
+
+.community-auth-panel p {
+    margin-bottom: 15px;
+    color: #64748b;
+}
+
+.community-auth-panel input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #243b63;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background: #36578a;
+}
+
+.auth-buttons button[hidden],
+.community-auth-panel input[hidden] {
+    display: none;
+}
+
+#authMessage {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#authStatus {
+    font-weight: 600;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.support-contact {
+    text-align: center;
+    background: #f1f6ff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.support-contact a {
+    color: #2457a7;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.support-contact a:hover {
+    text-decoration: underline;
+}
+
+.community-hub-card {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.community-interests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.community-interests span {
+    background: #eef3ff;
+    color: #2457a7;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.community-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.community-hub-card {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.support-search {
+    max-width: 550px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.support-search input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #ccd6e5;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.support-search input:focus {
+    border-color: #2457a7;
+    box-shadow: 0 0 5px rgba(36, 87, 167, 0.2);
+}
+
+#supportSearchMessage {
+    color: #666;
+    margin-top: 10px;
+    font-size: 14px;
+}

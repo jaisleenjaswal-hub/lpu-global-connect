@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Help | LPU Global Connect</title>
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="language_css.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">LPU Global Connect</a>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="campus.html">Campus Navigation</a></li>
+        <li><a href="food.html">Food & Dining</a></li>
+        <li><a href="language.html">Language Help</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="community.html">Community</a></li>
+    </ul>
+</header>
+
+<main class="language-page">
+
+    <section class="language-hero">
+        <p class="eyebrow">COMMUNICATE WITH CONFIDENCE</p>
+        <h1>Language Made Easier</h1>
+        <p>
+            Learn useful everyday phrases to communicate
+            with people and feel more comfortable on campus.
+        </p>
+    </section>
+
+    <section class="phrase-search-section">
+        <h2>Find a Useful Phrase</h2>
+
+        <div class="phrase-search-box">
+            <input
+                type="text"
+                id="phraseSearch"
+                placeholder="Search phrases like hello, thank you, food..."
+            >
+            <button id="phraseSearchBtn">Search</button>
+        </div>
+
+        <div class="phrase-filters">
+            <button class="phrase-filter active" data-category="all">All</button>
+            <button class="phrase-filter" data-category="greetings">Greetings</button>
+            <button class="phrase-filter" data-category="campus">Campus</button>
+            <button class="phrase-filter" data-category="food">Food</button>
+            <button class="phrase-filter" data-category="shopping">Shopping</button>
+            <button class="phrase-filter" data-category="transport">Transport</button>
+        </div>
+    </section>
+
+    <section class="phrase-results-section">
+        <h2>Everyday Phrasebook</h2>
+        <p>Useful phrases with simple translations and pronunciation.</p>
+
+        <div id="phraseResults" class="phrase-results">
+            <p>Loading phrases...</p>
+        </div>
+    </section>
+
+    <section class="language-tip">
+        <h2>A Little Tip</h2>
+        <p>
+            You don't need to know every word to communicate.
+            Start with a few simple phrases and practise them daily!
+        </p>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 LPU Global Connect | Far From Home Project</p>
+</footer>
+
+<script src="java.js"></script>
+<script src="language_js.js"></script>
+
+</body>
+</html>

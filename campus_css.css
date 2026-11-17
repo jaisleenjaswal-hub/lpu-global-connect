@@ -1,0 +1,286 @@
+/* =========================
+   CAMPUS NAVIGATION PAGE
+========================= */
+
+.campus-page {
+    padding-bottom: 50px;
+}
+
+.campus-hero {
+    background: linear-gradient(135deg, #e0f4f1, #f3faf9);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.eyebrow {
+    color: #16817a;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.campus-hero h1 {
+    color: #174e4b;
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.campus-hero p {
+    color: #526b69;
+    line-height: 1.7;
+}
+
+.campus-search-section {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.campus-search-section h2,
+.location-panel h2,
+.map-panel h2 {
+    color: #174e4b;
+    margin-bottom: 18px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #cbdedb;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-box button {
+    background: #176b68;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box button:hover {
+    background: #105451;
+}
+
+.location-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.filter-btn {
+    padding: 9px 18px;
+    border: 1px solid #b9d6d1;
+    background: white;
+    color: #176b68;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #176b68;
+    color: white;
+}
+
+.campus-content {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.location-panel,
+.map-panel {
+    background: white;
+    border: 1px solid #e1ecea;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(20, 70, 65, 0.06);
+}
+
+.section-note {
+    color: #71827f;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.location-results {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.location-card {
+    border: 1px solid #e1ecea;
+    padding: 16px;
+    border-radius: 10px;
+    background: #fbfefd;
+}
+
+.location-card h3 {
+    color: #176b68;
+    margin-bottom: 7px;
+}
+
+.location-card p {
+    color: #637572;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.location-card button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #e1f2ef;
+    color: #176b68;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.location-card button:hover {
+    background: #cce8e3;
+}
+
+.map-placeholder {
+    min-height: 250px;
+    background: #edf6f4;
+    border: 1px dashed #a8c9c3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.map-placeholder span {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.map-placeholder h3 {
+    color: #176b68;
+    margin-bottom: 8px;
+}
+
+.map-placeholder p {
+    color: #637572;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.location-details {
+    margin-top: 18px;
+    color: #526b69;
+    line-height: 1.7;
+}
+
+.location-details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #176b68;
+    font-weight: 600;
+}
+
+.campus-tip {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 28px;
+    background: #eaf5f2;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.campus-tip h2 {
+    color: #176b68;
+    margin-bottom: 10px;
+}
+
+.campus-tip p {
+    color: #526b69;
+    line-height: 1.7;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+    .campus-hero h1 {
+        font-size: 29px;
+    }
+
+    .campus-content {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        padding: 13px;
+    }
+
+    .location-filters {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    .campus-tip {
+        margin: 25px 20px 0;
+    }
+}
+
+/* GOOGLE MAP */
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #d5e5e1;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    min-height: 350px;
+}
+
+.directions-btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 11px 18px;
+    background: #176b68;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.directions-btn:hover {
+    background: #105451;
+}

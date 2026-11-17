@@ -1,7 +1,4 @@
-/* =========================
-   GLOBAL STYLING
-========================= */
-
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +7,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
 }
 
 body {
@@ -25,54 +21,55 @@ a {
     color: inherit;
 }
 
-button,
-input,
-select {
+button {
     font: inherit;
+    cursor: pointer;
 }
 
-/* =========================
-   NAVIGATION BAR
-========================= */
-
-header {
+/* NAVBAR */
+.site-header {
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .navbar {
-    min-height: 75px;
-    padding: 15px 7%;
+    min-height: 76px;
+    padding: 14px 7%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 
 .logo {
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
     color: #176b68;
+}
+
+.logo-icon {
+    margin-right: 6px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap: 21px;
     list-style: none;
 }
 
 .nav-links a {
-    color: #34474c;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
-    transition: color 0.2s;
+    color: #34474c;
+    transition: 0.2s;
 }
 
-.nav-links a:hover {
-    color: #176b68;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #21837d;
 }
 
 .menu-toggle {
@@ -80,14 +77,138 @@ header {
     border: none;
     background: none;
     color: #176b68;
-    font-size: 26px;
-    cursor: pointer;
+    font-size: 27px;
 }
 
-/* =========================
-   COMMON SECTIONS
-========================= */
+/* HERO */
+.hero {
+    min-height: 520px;
+    padding: 75px 9%;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(120deg, #dff1ef, #edf1fb);
+}
 
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #21837d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 17px 0;
+    color: #173b49;
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.14;
+}
+
+.hero h1 span {
+    color: #21837d;
+}
+
+.hero-content p {
+    max-width: 590px;
+    margin-bottom: 28px;
+    color: #52666d;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.primary-btn,
+.outline-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.primary-btn {
+    background: #176b68;
+    color: white;
+    border: 1px solid #176b68;
+}
+
+.primary-btn:hover {
+    background: #10514f;
+}
+
+.outline-btn {
+    background: white;
+    border: 1px solid #176b68;
+    color: #176b68;
+}
+
+.outline-btn:hover {
+    background: #e0f2f1;
+}
+
+/* WELCOME CARD */
+.hero-side {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 32px 25px;
+    border-radius: 17px;
+    background: white;
+    box-shadow: 0 12px 35px rgba(23,59,73,0.10);
+}
+
+.welcome-icon {
+    font-size: 45px;
+}
+
+.welcome-card h3 {
+    margin: 13px 0 8px;
+    color: #176b68;
+    font-size: 22px;
+}
+
+.welcome-card p {
+    color: #687a80;
+    font-size: 14px;
+}
+
+.welcome-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #edf0f0;
+}
+
+.welcome-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-stats strong {
+    color: #21837d;
+    font-size: 21px;
+}
+
+.welcome-stats span {
+    color: #687a80;
+    font-size: 12px;
+}
+
+/* SECTIONS */
 .section {
     padding: 75px 8%;
 }
@@ -98,115 +219,41 @@ header {
 
 .section-heading {
     text-align: center;
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto 40px;
-}
-
-.eyebrow {
-    color: #21837d;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .section-heading h2,
 .about h2 {
+    margin: 10px 0;
     color: #173b49;
     font-size: 32px;
-    margin: 10px 0;
 }
 
-.section-heading p {
+.section-heading p,
+.about p {
     color: #64777d;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
-.primary-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 7px;
-    background: #176b68;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.primary-btn:hover {
-    background: #10514f;
-}
-
-.secondary-btn {
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: 1px solid #176b68;
-    border-radius: 6px;
-    background: white;
-    color: #176b68;
-    cursor: pointer;
-}
-
-.secondary-btn:hover {
-    background: #e0f2f1;
-}
-
-/* =========================
-   HOME / HERO
-========================= */
-
-.hero {
-    min-height: 480px;
-    padding: 75px 10%;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(120deg, #dff1ef, #edf1fb);
-}
-
-.hero-content {
-    max-width: 680px;
-}
-
-.hero h1 {
-    margin: 15px 0;
-    color: #173b49;
-    font-size: clamp(36px, 5vw, 52px);
-    line-height: 1.15;
-}
-
-.hero-content p {
-    margin: 20px 0 28px;
-    max-width: 600px;
-    color: #52666d;
-    font-size: 16px;
-}
-
-/* =========================
-   SERVICE CARDS
-========================= */
-
+/* SERVICE CARDS */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
 }
 
-.service-card,
-.support-card {
-    padding: 27px 20px;
+.service-card {
+    display: block;
+    padding: 27px 23px;
     border-radius: 12px;
     background: white;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
     transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.service-card:hover,
-.support-card:hover {
+.service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 9px 23px rgba(0,0,0,0.09);
 }
 
 .card-icon {
@@ -215,15 +262,13 @@ header {
     font-size: 36px;
 }
 
-.service-card h3,
-.support-card h3 {
+.service-card h3 {
+    margin-bottom: 9px;
     color: #176b68;
-    margin-bottom: 10px;
     font-size: 18px;
 }
 
-.service-card p,
-.support-card p {
+.service-card p {
     color: #687a80;
     font-size: 14px;
 }
@@ -236,258 +281,77 @@ header {
     font-size: 14px;
 }
 
-/* =========================
-   CAMPUS NAVIGATION
-========================= */
-
-.search-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    max-width: 650px;
-    margin: 0 auto 25px;
-}
-
-.search-box input,
-.food-tools select {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #bfd3d1;
-    border-radius: 7px;
-    outline: none;
-    background: white;
-}
-
-.search-box input:focus,
-.food-tools select:focus {
-    border-color: #176b68;
-}
-
-.results {
-    max-width: 650px;
-    min-height: 65px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 9px;
-    background: white;
-    text-align: left;
-    color: #61747a;
-}
-
-.location-card {
-    padding: 16px;
-    margin-bottom: 12px;
-    background: #eaf4f3;
-    border-radius: 8px;
-    border-left: 4px solid #176b68;
-}
-
-.location-card h3 {
-    color: #176b68;
-    margin-bottom: 5px;
-}
-
-.location-card p {
-    font-size: 14px;
-}
-
-/* =========================
-   FOOD AND DINING
-========================= */
-
-.food-tools {
-    max-width: 850px;
-    margin: auto;
-}
-
-.food-tools h3 {
-    margin-bottom: 15px;
-    color: #176b68;
-}
-
-.food-tools select {
-    max-width: 350px;
-    margin-bottom: 25px;
-}
-
-.food-grid {
+/* FIRST STEPS */
+.steps-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.food-card,
-.phrase-card {
-    padding: 22px;
-    border-radius: 9px;
+.step-card {
+    padding: 25px;
+    border-radius: 11px;
     background: white;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #deebea;
 }
 
-.food-card h3,
-.phrase-card h3 {
+.step-number {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #21837d;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.step-card h3 {
     margin-bottom: 9px;
     color: #176b68;
 }
 
-.food-card p,
-.phrase-card p {
-    color: #62747a;
+.step-card p {
+    margin-bottom: 17px;
+    color: #687a80;
     font-size: 14px;
 }
 
-.communication-box {
-    max-width: 850px;
-    margin: 45px auto 0;
-}
-
-.communication-box > h3 {
-    color: #176b68;
-    margin-bottom: 8px;
-}
-
-.communication-box > p {
-    color: #64777d;
-    margin-bottom: 15px;
-}
-
-.communication-box .phrase-card {
-    margin-top: 12px;
-}
-
-/* =========================
-   COPY BUTTONS
-========================= */
-
-.copy-btn {
-    padding: 8px 14px;
-    margin-top: 13px;
-    border: none;
-    border-radius: 5px;
-    background: #e0f2f1;
-    color: #176b68;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.copy-btn:hover {
-    background: #176b68;
-    color: white;
-}
-
-.small-message {
-    min-height: 24px;
-    margin-top: 10px;
+.step-card a {
     color: #176b68;
     font-size: 13px;
+    font-weight: bold;
 }
 
-/* =========================
-   LANGUAGE SUPPORT
-========================= */
-
-.language-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    max-width: 850px;
-    margin: auto;
-}
-
-/* =========================
-   ONBOARDING CHECKLIST
-========================= */
-
-.checklist-box {
-    max-width: 700px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-}
-
-.progress-heading {
+/* HELP BANNER */
+.help-banner {
+    padding: 45px 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 25px;
+    background: #173b49;
+    color: white;
 }
 
-.progress-heading h3 {
-    color: #176b68;
+.help-banner .eyebrow {
+    color: #8ed4ca;
 }
 
-.progress-heading span {
-    color: #176b68;
-    font-weight: bold;
+.help-banner h2 {
+    margin: 9px 0;
+    font-size: 27px;
+}
+
+.help-banner p {
+    color: #d0dfe0;
     font-size: 14px;
 }
 
-.progress-track {
-    height: 12px;
-    margin-bottom: 25px;
-    border-radius: 20px;
-    background: #e4eeee;
-    overflow: hidden;
-}
-
-.progress-fill {
-    width: 0;
-    height: 100%;
+.help-banner .primary-btn {
+    flex-shrink: 0;
     background: #21837d;
-    border-radius: 20px;
-    transition: width 0.3s;
+    border-color: #21837d;
 }
 
-.check-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 5px;
-    border-bottom: 1px solid #edf0f0;
-    cursor: pointer;
-    color: #52666d;
-}
-
-.check-item input {
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-    accent-color: #176b68;
-}
-
-.check-item input:checked + span {
-    text-decoration: line-through;
-    color: #879597;
-}
-
-/* =========================
-   COMMUNITY SUPPORT
-========================= */
-
-.support-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.help-note {
-    max-width: 850px;
-    margin: 30px auto 0;
-    padding: 18px;
-    border-left: 4px solid #21837d;
-    border-radius: 6px;
-    background: white;
-    color: #52666d;
-    font-size: 14px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
+/* ABOUT */
 .about {
     text-align: center;
     background: white;
@@ -496,26 +360,39 @@ header {
 .about p {
     max-width: 750px;
     margin: 15px auto 0;
-    color: #64777d;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
-    padding: 30px 15px;
+    padding: 32px 15px;
     background: #173b49;
     color: white;
     text-align: center;
 }
 
 footer h3 {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 18px 0;
+}
+
+.footer-links a {
+    color: #d0e3e2;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: white;
 }
 
 .copyright {
@@ -524,25 +401,69 @@ footer p {
     font-size: 12px;
 }
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
+/* SHARED PAGE COMPONENTS */
+.page-hero {
+    padding: 55px 8%;
+    background: linear-gradient(120deg, #dff1ef, #edf1fb);
+    text-align: center;
+}
 
+.page-hero h1 {
+    margin: 10px 0;
+    color: #173b49;
+    font-size: 36px;
+}
+
+.page-hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #52666d;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.content-card {
+    padding: 24px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.content-card h3 {
+    color: #176b68;
+    margin-bottom: 10px;
+}
+
+.primary-btn:focus-visible,
+.outline-btn:focus-visible,
+.nav-links a:focus-visible {
+    outline: 3px solid #e0a43a;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 1000px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .navbar {
-        padding: 15px 4%;
+        padding: 14px 4%;
     }
 
     .nav-links {
-        gap: 13px;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
     .menu-toggle {
         display: block;
     }
@@ -563,9 +484,22 @@ footer p {
         display: flex;
     }
 
+    .nav-links a {
+        font-size: 14px;
+    }
+
     .hero {
-        min-height: 400px;
+        grid-template-columns: 1fr;
         padding: 55px 7%;
+        gap: 35px;
+    }
+
+    .hero-side {
+        justify-content: flex-start;
+    }
+
+    .welcome-card {
+        max-width: 100%;
     }
 
     .section {
@@ -576,23 +510,18 @@ footer p {
         font-size: 27px;
     }
 
-    .search-box {
-        flex-direction: column;
-    }
-
     .service-grid,
-    .food-grid,
-    .language-grid,
-    .support-grid {
+    .steps-grid {
         grid-template-columns: 1fr;
     }
 
-    .progress-heading {
-        align-items: flex-start;
+    .help-banner {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 7%;
     }
 
-    .checklist-box {
-        padding: 20px;
+    .page-hero h1 {
+        font-size: 29px;
     }
 }

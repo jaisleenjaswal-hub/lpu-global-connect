@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community & Support | LPU Global Connect</title>
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="community_css.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">LPU Global Connect</a>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="campus.html">Campus Navigation</a></li>
+            <li><a href="food.html">Food & Dining</a></li>
+            <li><a href="language.html">Language Help</a></li>
+            <li><a href="checklist.html">Student Checklist</a></li>
+            <li><a href="community.html" class="active">Community & Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="community-hero">
+        <div class="community-hero-content">
+            <span class="hero-label">YOU BELONG HERE</span>
+            <h1>Find Your People, Find Your Support</h1>
+            <p>
+                Moving to a new country is a big step.
+                Connect with students, explore communities
+                and discover support at LPU.
+            </p>
+            <a href="#communities" class="community-btn">
+                Explore Communities
+            </a>
+        </div>
+    </header>
+
+    <!-- COMMUNITY SECTION -->
+<section class="community-section" id="communities">
+
+    <div class="section-heading">
+        <span>MAKE CONNECTIONS</span>
+        <h2>Student Community Hub</h2>
+        <p>Find people who share your interests.</p>
+    </div>
+
+    <div class="community-grid">
+
+        <div class="community-card community-hub-card">
+
+            <div class="community-icon">🌍</div>
+
+            <h3>Connect With Students</h3>
+
+            <p>
+                Meet international students, exchange cultures,
+                find sports partners and study together.
+            </p>
+
+            <div class="community-interests">
+                <span>🌍 International Students</span>
+                <span>🎭 Cultural Activities</span>
+                <span>⚽ Sports & Fitness</span>
+                <span>💻 Technology & Learning</span>
+            </div>
+
+            <a href="#studentPosts">Explore Student Community</a>
+
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- SUPPORT SECTION -->
+<section class="support-section" id="support">
+
+    <div class="section-heading">
+        <span>NEED HELP?</span>
+        <h2>Campus Help Directory</h2>
+        <p>Find the right office and get assistance.</p>
+    </div>
+
+    <div class="support-search">
+    <input
+        type="text"
+        id="supportSearch"
+        placeholder="Search help... e.g. hostel, medical, academic"
+    >
+    <p id="supportSearchMessage"></p>
+</div>
+
+    <div class="support-grid">
+
+
+        <div class="support-card">
+    <h3>🎓 Academic Support</h3>
+    <p>Help with courses, examinations and academic queries.</p>
+    <p><strong>Location:</strong> Respective school/department office</p>
+    <p><strong>Room:</strong> Ask at department reception</p>
+    <a href="campus.html">Open Campus Navigation</a>
+</div>
+
+        <div class="support-card">
+            <h3>🌍 International Affairs</h3>
+            <p>International student guidance</p>
+            <p><strong>Block:</strong> 32</p>
+            <p><strong>Room:</strong> 308</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=LPU+Block+32"
+               target="_blank">Get Directions</a>
+        </div>
+
+        <div class="support-card">
+            <h3>🎓 Student Relationship</h3>
+            <p>Student assistance and guidance</p>
+            <p><strong>Block:</strong> 32</p>
+            <p><strong>Room:</strong> 100</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=LPU+Block+32"
+               target="_blank">Get Directions</a>
+        </div>
+
+        <div class="support-card">
+            <h3>📋 Registrar / Grievances</h3>
+            <p>University-related concerns</p>
+            <p><strong>Block:</strong> 30</p>
+            <p><strong>Room:</strong> 302</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=LPU+Block+30"
+               target="_blank">Get Directions</a>
+        </div>
+
+        <div class="support-card">
+            <h3>🏠 Hostel Support</h3>
+            <p>Accommodation and hostel assistance</p>
+            <p><strong>Location:</strong> Respective hostel</p>
+            <p><strong>Room:</strong> Ask the hostel warden</p>
+            <a href="campus.html">Open Campus Navigation</a>
+        </div>
+
+        <div class="support-card">
+            <h3>🩺 Health & Medical Support</h3>
+            <p>Medical assistance, healthcare services and campus hospital information.</p>
+            <p><strong>Location:</strong> University Hospital</p>
+            <p><strong>Room:</strong> Ask at reception</p>
+            <a href="campus.html">Find Campus Hospital</a>
+        </div>
+
+    </div>
+
+    <div class="support-contact">
+        <h3>General University Enquiries</h3>
+        <p>
+            <a href="tel:+911824517000">+91 1824 517000</a> |
+            <a href="tel:+911824404404">+91 1824 404404</a>
+        </p>
+        <p>
+            International Office:
+            <a href="mailto:international@lpu.co.in">
+                international@lpu.co.in
+            </a>
+        </p>
+    </div>
+
+</section>
+
+    <!-- CONNECT FORM -->
+<section class="connect-section">
+
+    <!-- LOGIN PANEL WILL APPEAR HERE -->
+    <div id="authPanelMount"></div>
+
+    <!-- HIDDEN UNTIL STUDENT SIGNS IN -->
+    <div id="connectFormArea" hidden>
+
+        <div class="section-heading">
+            <span>START A CONVERSATION</span>
+            <h2>Connect With Other Students</h2>
+            <p>
+                Share a message and let other students know
+                what kind of connection you're looking for.
+            </p>
+        </div>
+
+        <form id="connectForm" class="connect-form">
+
+            <label for="studentName">Your Name</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter your name" required>
+
+            <label for="studentCountry">Your Country</label>
+            <input type="text" id="studentCountry"
+                   placeholder="Enter your country" required>
+
+            <label for="connectionType">What would you like to connect about?</label>
+            <select id="connectionType" required>
+                <option value="">Select an option</option>
+                <option value="Making Friends">Making Friends</option>
+                <option value="Cultural Exchange">Cultural Exchange</option>
+                <option value="Study Groups">Study Groups</option>
+                <option value="Campus Activities">Campus Activities</option>
+            </select>
+
+            <label for="studentMessage">Your Message</label>
+            <textarea id="studentMessage"
+                      placeholder="Write a short introduction..."
+                      rows="4" required></textarea>
+
+            <button type="submit" class="community-btn">
+                Post My Introduction
+            </button>
+
+            <p id="formMessage"></p>
+        </form>
+
+    </div>
+
+    <!-- PUBLIC STUDENT POSTS -->
+    <div class="student-posts">
+        <h3>Student Introductions</h3>
+        <div id="studentPosts">
+            <p class="empty-posts">
+                No introductions yet. Be the first to share!
+            </p>
+        </div>
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
+    <footer class="community-footer">
+        <h3>LPU Global Connect</h3>
+        <p>Far From Home, Never Alone.</p>
+        <p>Helping international students feel at home at LPU.</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="java.js"></script>
+    <script src="supabase.js"></script>
+    <script src="community_js.js"></script>
+
+</body>
+</html>

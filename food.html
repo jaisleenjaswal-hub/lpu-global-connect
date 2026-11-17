@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Dining | LPU Global Connect</title>
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="food_css.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">LPU Global Connect</a>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="campus.html">Campus Navigation</a></li>
+        <li><a href="food.html">Food & Dining</a></li>
+        <li><a href="language.html">Language Help</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="community.html">Community</a></li>
+    </ul>
+</header>
+
+<main class="food-page">
+
+    <section class="food-hero">
+        <p class="eyebrow">DISCOVER CAMPUS DINING</p>
+        <h1>Good Food, A Little Comfort</h1>
+        <p>Explore dining options and find food that suits your preferences.</p>
+    </section>
+
+    <section class="food-search-section">
+
+        <h2>Find Something to Eat</h2>
+
+        <div class="food-search-box">
+            <input type="text" id="foodSearch"
+                placeholder="Search food or dining options...">
+
+            <button id="foodSearchBtn">Search</button>
+        </div>
+
+        <div class="food-filters">
+            <button class="food-filter active" data-filter="all">All</button>
+            <button class="food-filter" data-filter="vegetarian">Vegetarian</button>
+            <button class="food-filter" data-filter="non-vegetarian">Non-Vegetarian</button>
+            <button class="food-filter" data-filter="snacks">Snacks</button>
+            <button class="food-filter" data-filter="drinks">Drinks</button>
+        </div>
+
+    </section>
+
+    <section class="food-results-section">
+
+        <div class="food-heading">
+            <h2>Dining Options</h2>
+            <p>Explore available food categories and outlets.</p>
+        </div>
+
+        <div id="foodResults" class="food-results">
+            <p>Loading dining options...</p>
+        </div>
+
+    </section>
+
+    <section class="saved-food-section">
+        <h2>My Favourite Dining Options ❤️</h2>
+        <p>Save places to find them quickly later.</p>
+
+        <div id="savedFood">
+            <p>You haven't saved any favourites yet.</p>
+        </div>
+    </section>
+
+    <section class="food-help">
+        <h2>Looking for something specific?</h2>
+        <p>Use Google Maps to explore dining places around the LPU campus.</p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=restaurants+near+Lovely+Professional+University+Phagwara"
+           target="_blank" rel="noopener noreferrer">
+            Explore Nearby Food Places
+        </a>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 LPU Global Connect | Far From Home Project</p>
+</footer>
+
+<script src="java.js"></script>
+<script src="food_js.js"></script>
+
+</body>
+</html>
